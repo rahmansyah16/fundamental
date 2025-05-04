@@ -70,6 +70,9 @@ export const authConfig = {
         return null;
       },
     }),
-    google,
+    google({
+      clientId: process.env.GOOGLE_CLIENT_ID!,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
+    }),
   ], // Add providers with an empty array for now
 } satisfies NextAuthConfig;
